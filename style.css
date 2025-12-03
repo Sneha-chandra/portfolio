@@ -782,6 +782,13 @@ body {
     color: white;
 }
 
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
 .image-decoration {
     position: absolute;
     top: 20px;
