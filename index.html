@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneha Chandra | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <span class="logo-text">SC</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#achievements" class="nav-link">Achievements</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="greeting">Hello, I'm</span>
+                <h1 class="name">
+                    <span class="first-name">Sneha</span>
+                    <span class="last-name">Chandra</span>
+                </h1>
+                <div class="role-container">
+                    <span class="role-prefix">I'm a</span>
+                    <span class="role" id="typed-role"></span>
+                    <span class="cursor-blink">|</span>
+                </div>
+                <p class="tagline">Passionate about IoT, Cybersecurity, Blockchain & Building Digital Experiences</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <span>View Projects</span>
+                        <i class="fas fa-eye"></i>
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="mailto:snehachandra042@gmail.com" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/sneha-chandra" target="_blank" class="social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/sneha-chandra" target="_blank" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="tel:+918709917670" class="social-link" title="Phone">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Cybersecurity</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-microchip"></i>
+                    <span>IoT</span>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-link"></i>
+                    <span>Blockchain</span>
+                </div>
+                <div class="floating-card card-4">
+                    <i class="fas fa-code"></i>
+                    <span>Developer</span>
+                </div>
+                <div class="hero-3d-element">
+                    <div class="cube">
+                        <div class="face front"></div>
+                        <div class="face back"></div>
+                        <div class="face right"></div>
+                        <div class="face left"></div>
+                        <div class="face top"></div>
+                        <div class="face bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">01.</span>
+                <span class="title-text">About Me</span>
+                <span class="title-line"></span>
+            </h2>
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="about-card-inner">
+                        <div class="about-image">
+                            <div class="image-frame">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-user"></i>
+                                    <span>SC</span>
+                                </div>
+                            </div>
+                            <div class="image-decoration"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm a <strong>B.Tech student in Computer Science Engineering</strong> specializing in
+                        <span class="highlight">IoT with Cybersecurity</span> at Amity University, Noida.
+                        With a strong academic foundation (8.79 CGPA) and diverse practical experience,
+                        I bridge the gap between theoretical knowledge and real-world applications.
+                    </p>
+                    <p>
+                        My journey spans from leading a 21-member team developing Digital Twin Sandboxes to
+                        publishing research in Springer Nature. I'm passionate about creating innovative
+                        solutions in cybersecurity, blockchain, and web development while actively
+                        contributing to my community through leadership roles and NGO work.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Internships</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Publications</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">8+</span>
+                            <span class="stat-label">Tech Events</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">60+</span>
+                            <span class="stat-label">Students Taught</span>
+                        </div>
+                    </div>
+                    <div class="education-highlight">
+                        <div class="edu-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>B.Tech CSE (IoT + Cybersecurity)</h4>
+                                <p>Amity University, Noida | 2022-2026 | 8.79 CGPA</p>
+                            </div>
+                        </div>
+                        <div class="edu-item">
+                            <i class="fas fa-plane"></i>
+                            <div>
+                                <h4>Study Abroad Program</h4>
+                                <p>Analytics for BI | Amity Global Institute, Singapore</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">02.</span>
+                <span class="title-text">Skills & Expertise</span>
+                <span class="title-line"></span>
+            </h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Solidity</span>
+                        <span class="skill-tag">Bash/Shell</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Responsive Design</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Database & Backend</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Oracle</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Cybersecurity & Blockchain</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Kali Linux</span>
+                        <span class="skill-tag">Ethereum</span>
+                        <span class="skill-tag">MetaMask</span>
+                        <span class="skill-tag">Remix</span>
+                        <span class="skill-tag">Ganache</span>
+                        <span class="skill-tag">PE Studio</span>
+                        <span class="skill-tag">VMware</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3>IoT & Hardware</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Arduino UNO</span>
+                        <span class="skill-tag">ESP32</span>
+                        <span class="skill-tag">Tinkercad</span>
+                        <span class="skill-tag">Blynk IoT</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Tools & Platforms</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Unity</span>
+                        <span class="skill-tag">Canva</span>
+                        <span class="skill-tag">VMware Workstation</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+                <div class="skill-category full-width">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Soft Skills</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Leadership</span>
+                        <span class="skill-tag">Research</span>
+                        <span class="skill-tag">Event Management</span>
+                        <span class="skill-tag">Content Writing</span>
+                        <span class="skill-tag">Social Media</span>
+                        <span class="skill-tag">Team Management</span>
+                        <span class="skill-tag">Public Speaking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">03.</span>
+                <span class="title-text">Experience</span>
+                <span class="title-line"></span>
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">May - July 2025</span>
+                            <span class="timeline-type">Internship</span>
+                        </div>
+                        <h3 class="timeline-title">Digital Twin Intern</h3>
+                        <h4 class="timeline-company">Open Health Systems Laboratory (OHSL)</h4>
+                        <ul class="timeline-details">
+                            <li>Led a 21-member team to develop a Digital Twin Sandbox using VMware and Unity</li>
+                            <li>Delivered a scalable simulation prototype with comprehensive documentation</li>
+                            <li>Created detailed reports on business models, security factors and framework architecture</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>VMware</span>
+                            <span>Unity</span>
+                            <span>Digital Twin</span>
+                            <span>Leadership</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">May - June 2024</span>
+                            <span class="timeline-type">Internship</span>
+                        </div>
+                        <h3 class="timeline-title">Web Development Intern</h3>
+                        <h4 class="timeline-company">Bharat Coking Coal Limited (BCCL)</h4>
+                        <ul class="timeline-details">
+                            <li>Conducted research on 50+ websites to analyze best frontend practices</li>
+                            <li>Designed and developed components for the official BCCL website</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Web Development</span>
+                            <span>Frontend</span>
+                            <span>UI/UX Research</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Sep - Oct 2023</span>
+                            <span class="timeline-type">Internship</span>
+                        </div>
+                        <h3 class="timeline-title">Marketing & Promotion Intern</h3>
+                        <h4 class="timeline-company">Curious Media</h4>
+                        <ul class="timeline-details">
+                            <li>Managed 10+ YouTube influencers with 1M+ combined followers</li>
+                            <li>Researched 200 gaming influencers for Facebook Live campaigns</li>
+                            <li>Successfully boosted engagement and reactions across platforms</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Influencer Marketing</span>
+                            <span>Social Media</span>
+                            <span>Research</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">June - July 2023</span>
+                            <span class="timeline-type">Internship</span>
+                        </div>
+                        <h3 class="timeline-title">Information Technology Intern</h3>
+                        <h4 class="timeline-company">ESL Steel Limited</h4>
+                        <ul class="timeline-details">
+                            <li>Gained knowledge about SAP-ERP, firewall setup, and IT infrastructure</li>
+                            <li>Developed two mini projects using VB.NET and SQL</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>SAP-ERP</span>
+                            <span>VB.NET</span>
+                            <span>SQL</span>
+                            <span>IT Infrastructure</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Mar - Jun 2023</span>
+                            <span class="timeline-type">Internship</span>
+                        </div>
+                        <h3 class="timeline-title">Discord Community Coordinator</h3>
+                        <h4 class="timeline-company">Rusk Media</h4>
+                        <ul class="timeline-details">
+                            <li>Increased community engagement by 70% through strategic social media management</li>
+                            <li>Supervised SERVER WARS with 50+ participants from top 5 Discord servers</li>
+                            <li>Managed teams and leaderboard operations</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Discord</span>
+                            <span>Community Management</span>
+                            <span>Gaming</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">04.</span>
+                <span class="title-text">Research & Projects</span>
+                <span class="title-line"></span>
+            </h2>
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-category">Research Paper</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge">SCOPUS Indexed</span>
+                        <h3>Ransomware Detection on Windows Systems</h3>
+                        <p>Published in Springer Nature under "Intelligent IT Solutions to Promote Indigenous Innovations" at The International Conference on Entrepreneurship, Innovation, and Leadership 2024</p>
+                        <div class="project-tech">
+                            <span>Cybersecurity</span>
+                            <span>Windows</span>
+                            <span>Malware Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-icon">
+                            <i class="fas fa-city"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-category">Research Paper</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge">AISUMMIT 2025</span>
+                        <h3>Urban Digital Twins for Sustainable Cities</h3>
+                        <p>Paper accepted for presentation at Global AI Summit 2025, exploring the intersection of AI, IoT, and urban planning</p>
+                        <div class="project-tech">
+                            <span>Digital Twin</span>
+                            <span>AI</span>
+                            <span>Smart Cities</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-icon">
+                            <i class="fas fa-vr-cardboard"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-category">AR/VR Project</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Art Gallery VR Experience</h3>
+                        <p>Designed immersive AR/VR interfaces enhancing user navigation and experience for 90% of surveyed users</p>
+                        <div class="project-tech">
+                            <span>C#</span>
+                            <span>Unity</span>
+                            <span>VR/AR</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-icon">
+                            <i class="fas fa-plane-departure"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-category">Web Development</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Ethereal Getaways</h3>
+                        <p>Frontend design and development of a travel website with modern UI/UX principles</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-category">Patent</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge">In Process</span>
+                        <h3>AI-Based Radiation Therapy for Cervical Cancer</h3>
+                        <p>Awarded "Intellectual Property Right and Innovation Award 2024" for this groundbreaking presentation patent</p>
+                        <div class="project-tech">
+                            <span>AI/ML</span>
+                            <span>Healthcare</span>
+                            <span>Innovation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">05.</span>
+                <span class="title-text">Achievements & Leadership</span>
+                <span class="title-line"></span>
+            </h2>
+
+            <div class="achievements-grid">
+                <!-- Awards -->
+                <div class="achievement-category">
+                    <h3 class="category-title"><i class="fas fa-trophy"></i> Awards & Competitions</h3>
+                    <div class="achievement-cards">
+                        <div class="achievement-card gold">
+                            <div class="medal"><i class="fas fa-medal"></i></div>
+                            <h4>Runner-Up</h4>
+                            <p>IET Innovation Award 2025</p>
+                        </div>
+                        <div class="achievement-card bronze">
+                            <div class="medal"><i class="fas fa-medal"></i></div>
+                            <h4>Third Place</h4>
+                            <p>ISDRIS 2025 by ISDC</p>
+                        </div>
+                        <div class="achievement-card gold">
+                            <div class="medal"><i class="fas fa-crown"></i></div>
+                            <h4>First Place</h4>
+                            <p>PATN'24 by IET Delhi</p>
+                        </div>
+                        <div class="achievement-card gold">
+                            <div class="medal"><i class="fas fa-flag"></i></div>
+                            <h4>First Place</h4>
+                            <p>Capture the Ops (CTF)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leadership -->
+                <div class="achievement-category">
+                    <h3 class="category-title"><i class="fas fa-users"></i> Leadership Roles</h3>
+                    <div class="leadership-cards">
+                        <div class="leadership-card">
+                            <div class="leadership-icon"><i class="fas fa-crown"></i></div>
+                            <div class="leadership-info">
+                                <h4>President</h4>
+                                <p>IET On Campus, Amity University</p>
+                                <span class="leadership-detail">Best IET Volunteer Award | Grew team to 60 members | 8+ tech events</span>
+                            </div>
+                        </div>
+                        <div class="leadership-card">
+                            <div class="leadership-icon"><i class="fas fa-theater-masks"></i></div>
+                            <div class="leadership-info">
+                                <h4>President</h4>
+                                <p>O3 Odyssey of Ohit, Dramatics Society</p>
+                                <span class="leadership-detail">Conducted auditions | Performed at DME & DU</span>
+                            </div>
+                        </div>
+                        <div class="leadership-card">
+                            <div class="leadership-icon"><i class="fas fa-futbol"></i></div>
+                            <div class="leadership-info">
+                                <h4>Vice Sports Captain</h4>
+                                <p>ASET Sangathan 2025-26</p>
+                                <span class="leadership-detail">Hockey, Kabaddi, Handball, Softball, Football | 3yr Champions</span>
+                            </div>
+                        </div>
+                        <div class="leadership-card">
+                            <div class="leadership-icon"><i class="fas fa-calendar-alt"></i></div>
+                            <div class="leadership-info">
+                                <h4>Head Student Coordinator</h4>
+                                <p>Amity Utsav 2025</p>
+                                <span class="leadership-detail">CyberCup 4.0 Organizing Head | AYF'24 LinkedIn Head & Emcee</span>
+                            </div>
+                        </div>
+                        <div class="leadership-card">
+                            <div class="leadership-icon"><i class="fas fa-heart"></i></div>
+                            <div class="leadership-info">
+                                <h4>Student Leader</h4>
+                                <p>YSS Foundation NGO</p>
+                                <span class="leadership-detail">Teaching 60+ students | Yamuna cleaning drives | Voter awareness</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="achievement-category">
+                    <h3 class="category-title"><i class="fas fa-certificate"></i> Certifications</h3>
+                    <div class="cert-grid">
+                        <div class="cert-card">
+                            <div class="cert-logo"><i class="fab fa-google"></i></div>
+                            <div class="cert-info">
+                                <h4>Foundations of Cybersecurity</h4>
+                                <p>Google | Mar 2025</p>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-logo"><i class="fas fa-network-wired"></i></div>
+                            <div class="cert-info">
+                                <h4>Introduction to Cybersecurity</h4>
+                                <p>CISCO | Feb 2025</p>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-logo"><i class="fas fa-network-wired"></i></div>
+                            <div class="cert-info">
+                                <h4>CCNAv7: Intro to Networks</h4>
+                                <p>CISCO | Feb 2025</p>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-logo"><i class="fas fa-graduation-cap"></i></div>
+                            <div class="cert-info">
+                                <h4>Introduction to IoT</h4>
+                                <p>NPTEL | Nov 2024</p>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-logo"><i class="fab fa-python"></i></div>
+                            <div class="cert-info">
+                                <h4>Python for Data Science</h4>
+                                <p>NPTEL | Nov 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">06.</span>
+                <span class="title-text">Get In Touch</span>
+                <span class="title-line"></span>
+            </h2>
+            <div class="contact-content">
+                <div class="contact-text">
+                    <h3>Let's Connect!</h3>
+                    <p>I'm currently looking for new opportunities and my inbox is always open. Whether you have a question, want to collaborate on a project, or just want to say hi, I'll try my best to get back to you!</p>
+                    <div class="contact-info">
+                        <a href="mailto:snehachandra042@gmail.com" class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-detail">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">snehachandra042@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+918709917670" class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div class="contact-detail">
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">+91 8709917670</span>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com/in/sneha-chandra" target="_blank" class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div class="contact-detail">
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">sneha-chandra</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/sneha-chandra" target="_blank" class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-github"></i></div>
+                            <div class="contact-detail">
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">sneha-chandra</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                            <span class="form-highlight"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                            <span class="form-highlight"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                            <span class="form-highlight"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                            <span class="form-highlight"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">SC</div>
+            <p class="footer-text">Designed & Built by Sneha Chandra</p>
+            <div class="footer-social">
+                <a href="mailto:snehachandra042@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/sneha-chandra" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/sneha-chandra" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="copyright">&copy; 2025 Sneha Chandra. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
