@@ -3,9 +3,7 @@
    Modern, Aesthetic, Creative, 3D, Responsive
    ============================================ */
 
-// Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all components
     initCustomCursor();
     initParticles();
     initNavigation();
@@ -35,13 +33,11 @@ function initCustomCursor() {
     });
 
     function animateCursor() {
-        // Smooth cursor movement
         cursorX += (mouseX - cursorX) * 0.2;
         cursorY += (mouseY - cursorY) * 0.2;
         cursor.style.left = cursorX + 'px';
         cursor.style.top = cursorY + 'px';
 
-        // Slower follower
         followerX += (mouseX - followerX) * 0.1;
         followerY += (mouseY - followerY) * 0.1;
         follower.style.left = followerX + 'px';
@@ -51,16 +47,13 @@ function initCustomCursor() {
     }
     animateCursor();
 
-    // Hover effects on interactive elements
     const interactiveElements = document.querySelectorAll('a, button, .btn, .skill-tag, .floating-card, .project-card, .achievement-card');
-
     interactiveElements.forEach(el => {
         el.addEventListener('mouseenter', () => {
             cursor.style.transform = 'scale(2)';
             follower.style.transform = 'scale(1.5)';
             follower.style.opacity = '0.2';
         });
-
         el.addEventListener('mouseleave', () => {
             cursor.style.transform = 'scale(1)';
             follower.style.transform = 'scale(1)';
@@ -88,7 +81,6 @@ function createParticle(container, colors) {
     const particle = document.createElement('div');
     particle.className = 'particle';
 
-    // Random properties
     const size = Math.random() * 4 + 2;
     const left = Math.random() * 100;
     const delay = Math.random() * 15;
@@ -116,7 +108,6 @@ function initNavigation() {
     const mobileMenu = document.querySelector('.mobile-menu');
     const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
 
-    // Scroll effect on navbar
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -125,7 +116,6 @@ function initNavigation() {
         }
     });
 
-    // Mobile menu toggle
     if (hamburger && mobileMenu) {
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
@@ -133,7 +123,6 @@ function initNavigation() {
             document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
         });
 
-        // Close mobile menu when clicking links
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
@@ -152,14 +141,14 @@ function initTypingEffect() {
     if (!typedElement) return;
 
     const roles = [
-        'Tech Enthusiast',
+        'Technical Program Manager',
+        'AI / LLM Engineer',
         'Cybersecurity Researcher',
-        'IoT Developer',
-        'Blockchain Explorer',
-        'Web Developer',
-        'Team Leader',
+        'Digital Twin Engineer',
         'Published Researcher',
-        'Sports Enthusiast'
+        'Blockchain Developer',
+        'IoT Developer',
+        'Web Developer'
     ];
 
     let roleIndex = 0;
@@ -181,7 +170,6 @@ function initTypingEffect() {
         }
 
         if (!isDeleting && charIndex === currentRole.length) {
-            // Pause at end of word
             typingSpeed = 2000;
             isDeleting = true;
         } else if (isDeleting && charIndex === 0) {
@@ -193,7 +181,6 @@ function initTypingEffect() {
         setTimeout(typeRole, typingSpeed);
     }
 
-    // Start typing effect
     setTimeout(typeRole, 1000);
 }
 
@@ -201,7 +188,6 @@ function initTypingEffect() {
    SCROLL ANIMATIONS
    ============================================ */
 function initScrollAnimations() {
-    // Add fade-in class to elements
     const animatedElements = document.querySelectorAll(
         '.section-title, .about-card, .about-text, .skill-category, ' +
         '.timeline-item, .project-card, .achievement-category, ' +
@@ -212,7 +198,6 @@ function initScrollAnimations() {
         el.classList.add('fade-in');
     });
 
-    // Intersection Observer for scroll animations
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -223,15 +208,12 @@ function initScrollAnimations() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                // Optional: stop observing after animation
-                // observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
     animatedElements.forEach(el => observer.observe(el));
 
-    // Stagger animation for skill tags
     const skillCategories = document.querySelectorAll('.skill-category');
     skillCategories.forEach(category => {
         const tags = category.querySelectorAll('.skill-tag');
@@ -240,9 +222,7 @@ function initScrollAnimations() {
         });
     });
 
-    // Parallax effect for floating cards
     const floatingCards = document.querySelectorAll('.floating-card');
-
     window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
         floatingCards.forEach((card, index) => {
@@ -279,7 +259,7 @@ function initActiveNavOnScroll() {
     }
 
     window.addEventListener('scroll', setActiveLink);
-    setActiveLink(); // Initial call
+    setActiveLink();
 }
 
 /* ============================================
@@ -315,7 +295,6 @@ function initFormHandler() {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        // Get form data
         const formData = new FormData(form);
         const data = {
             name: formData.get('name'),
@@ -324,18 +303,12 @@ function initFormHandler() {
             message: formData.get('message')
         };
 
-        // Create mailto link
         const mailtoLink = `mailto:snehachandra042@gmail.com?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(
             `Name: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
         )}`;
 
-        // Open email client
         window.location.href = mailtoLink;
-
-        // Show success message
         showNotification('Opening your email client...', 'success');
-
-        // Reset form
         form.reset();
     });
 }
@@ -344,13 +317,11 @@ function initFormHandler() {
    NOTIFICATION HELPER
    ============================================ */
 function showNotification(message, type = 'info') {
-    // Remove existing notification
     const existingNotification = document.querySelector('.notification');
     if (existingNotification) {
         existingNotification.remove();
     }
 
-    // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
     notification.innerHTML = `
@@ -358,7 +329,6 @@ function showNotification(message, type = 'info') {
         <button class="notification-close">&times;</button>
     `;
 
-    // Add styles
     notification.style.cssText = `
         position: fixed;
         bottom: 2rem;
@@ -375,37 +345,20 @@ function showNotification(message, type = 'info') {
         box-shadow: 0 10px 40px rgba(139, 92, 246, 0.3);
     `;
 
-    // Add animation keyframes
     const style = document.createElement('style');
     style.textContent = `
         @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(100px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            from { opacity: 0; transform: translateX(100px); }
+            to { opacity: 1; transform: translateX(0); }
         }
     `;
     document.head.appendChild(style);
-
     document.body.appendChild(notification);
 
-    // Close button functionality
     const closeBtn = notification.querySelector('.notification-close');
-    closeBtn.style.cssText = `
-        background: none;
-        border: none;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-        line-height: 1;
-    `;
+    closeBtn.style.cssText = `background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; line-height: 1;`;
     closeBtn.addEventListener('click', () => notification.remove());
 
-    // Auto remove after 5 seconds
     setTimeout(() => {
         if (notification.parentNode) {
             notification.style.animation = 'slideOutRight 0.5s ease forwards';
@@ -425,13 +378,10 @@ function initTiltEffect() {
             const rect = el.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
-
             const rotateX = (y - centerY) / 20;
             const rotateY = (centerX - x) / 20;
-
             el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
         });
 
@@ -441,7 +391,6 @@ function initTiltEffect() {
     });
 }
 
-// Initialize tilt effect after a short delay to ensure DOM is ready
 setTimeout(initTiltEffect, 100);
 
 /* ============================================
@@ -450,9 +399,7 @@ setTimeout(initTiltEffect, 100);
 function animateCounters() {
     const counters = document.querySelectorAll('.stat-number');
 
-    const observerOptions = {
-        threshold: 0.5
-    };
+    const observerOptions = { threshold: 0.5 };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -486,7 +433,6 @@ function animateCounters() {
     counters.forEach(counter => observer.observe(counter));
 }
 
-// Initialize counter animation
 setTimeout(animateCounters, 100);
 
 /* ============================================
@@ -509,14 +455,12 @@ function initLazyLoading() {
     lazyImages.forEach(img => imageObserver.observe(img));
 }
 
-// Initialize lazy loading
 initLazyLoading();
 
 /* ============================================
    KEYBOARD NAVIGATION
    ============================================ */
 document.addEventListener('keydown', (e) => {
-    // Press 'Escape' to close mobile menu
     if (e.key === 'Escape') {
         const hamburger = document.querySelector('.hamburger');
         const mobileMenu = document.querySelector('.mobile-menu');
@@ -529,13 +473,11 @@ document.addEventListener('keydown', (e) => {
 });
 
 /* ============================================
-   PRELOADER (Optional)
+   POST-LOAD ANIMATIONS
    ============================================ */
 window.addEventListener('load', () => {
-    // Add loaded class to body for any post-load animations
     document.body.classList.add('loaded');
 
-    // Trigger initial animations
     const heroElements = document.querySelectorAll('.hero .fade-in');
     heroElements.forEach((el, index) => {
         setTimeout(() => {
@@ -549,5 +491,5 @@ window.addEventListener('load', () => {
    ============================================ */
 console.log('%c Welcome to Sneha Chandra\'s Portfolio! ',
     'background: linear-gradient(135deg, #8b5cf6, #ec4899); color: white; font-size: 16px; padding: 10px 20px; border-radius: 5px;');
-console.log('%c Built with passion and creativity ',
+console.log('%c TPM @ NVIDIA · 3× SCOPUS Published · IET President ',
     'color: #8b5cf6; font-size: 12px;');
